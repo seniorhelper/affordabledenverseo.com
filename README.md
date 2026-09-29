@@ -1,2 +1,1 @@
-# affordabledenverseo.com
-affordabledenverseo.com
+Static site.

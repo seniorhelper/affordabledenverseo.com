@@ -1,0 +1,41 @@
+# Affordable Denver SEO
+
+> Affordable Denver SEO is an affordable SEO resource and service line powered by Eye To Ad Media, a Denver-headquartered marketing agency founded in 2012. It offers SEO packages starting at $597, $1,197 and $2,497 per month, every one including conversion work, plus free SEO budget tools.
+
+Eye To Ad Media: 1001 Bannock St #660, Denver, CO 80204. Phone 1-800-481-8638. BBB A+ accredited, 5.0 on Google across 60 reviews. Works with businesses worldwide. No long lock-in contracts. Never guarantees rankings. Clients own everything built for them. Machine-readable package data: https://affordabledenverseo.com/api/packages.json
+
+## Packages
+- [SEO packages](https://affordabledenverseo.com/seo-packages/): SEO packages with clear starting prices: from $597, $1,197 and $2,497 a month, each with conversion work. Build yours with the free package builder.
+- [Monthly SEO packages](https://affordabledenverseo.com/monthly-seo-packages/): Monthly SEO packages explained: what gets done each month, why SEO works as a monthly plan, and what separates a real monthly plan from a report-only retainer.
+- [Local SEO packages](https://affordabledenverseo.com/local-seo-packages/): Local SEO packages built for the Map Pack: Google Business Profile, reviews, citations, local pages and schema. Clear starting prices and no long lock-ins.
+- [Small business SEO packages](https://affordabledenverseo.com/small-business-seo-packages/): Affordable SEO packages for small business owners: right-sized scope, plain-English reporting, conversion work included and starting prices you can plan around.
+- [Ecommerce SEO packages](https://affordabledenverseo.com/ecommerce-seo-packages/): Ecommerce SEO packages focused on category pages, product schema, site speed and duplicate-URL control, for online stores that want organic sales without huge ad bills.
+- [Website and SEO packages](https://affordabledenverseo.com/website-seo-packages/): Website and SEO packages that build search in from day one: fast pages, schema, local pages and conversion paths, plus subscribe-to-own from $99 a month.
+- [Link building packages](https://affordabledenverseo.com/link-building-packages/): Honest link building packages: links earned through press releases, news coverage, real directories and partners, and why cheap backlink packages are risky.
+
+## Services
+- [Affordable SEO services](https://affordabledenverseo.com/affordable-seo-services/): Affordable SEO services with real work behind the price: technical fixes, local SEO, answer-first content, AI search and conversion optimization. No long lock-ins.
+- [How to choose an affordable SEO company](https://affordabledenverseo.com/affordable-seo-company/): How to choose an affordable SEO company, agency or firm: the questions to ask, the red flags to avoid, and what fair pricing and reporting look like.
+- [Affordable local SEO services](https://affordabledenverseo.com/affordable-local-seo/): Affordable local SEO services that focus your budget on what moves Map Pack rankings: Google Business Profile, reviews, listings and local pages.
+- [Cheap SEO services vs affordable SEO](https://affordabledenverseo.com/cheap-seo-services/): Cheap SEO services explained honestly: what $99-a-month SEO usually is, the risks of low cost SEO, and how affordable SEO differs. Plus smarter options for tiny budgets.
+- [SEO for startups](https://affordabledenverseo.com/seo-for-startups/): SEO for startups: what to do first with a small budget, how to build topical authority, and how to avoid the technical traps that stall new sites.
+- [Affordable SEO consultant](https://affordabledenverseo.com/affordable-seo-consultant/): An affordable SEO consultant for businesses that want expert direction without a big monthly retainer: audits, strategy calls, second opinions and DIY coaching.
+- [Free 90-day SEO plan generator](https://affordabledenverseo.com/seo-plan/): Build a free 90-day SEO plan in seconds: week-by-week tasks tailored to your business type, website and goal. Plus how to write an SEO marketing plan that works.
+- [SEO tools cost: Semrush vs Ahrefs vs Moz](https://affordabledenverseo.com/seo-tools-cost/): What SEO tools cost in 2026: Semrush, Ahrefs and Moz Pro plan prices compared, what free tools cover, and a calculator for the true cost of doing SEO yourself.
+
+## Free tools
+- [Free SEO budget tools](https://affordabledenverseo.com/tools/): Free SEO tools for budget-conscious businesses: SEO budget planner, quote checker, package builder, 90-day plan generator and SEO tool cost calculator.
+- [SEO budget planner](https://affordabledenverseo.com/tools/seo-budget-planner/): Free SEO budget planner: enter your monthly budget and business type to see the hours it buys, how to split it across the work, and what waiting could cost.
+- [SEO quote checker](https://affordabledenverseo.com/tools/seo-quote-checker/): Free SEO quote checker: paste any SEO proposal to flag ranking guarantees, bulk directory submissions, bought backlinks, lock-in contracts and missing essentials.
+
+## Blog
+- [Local SEO on a Budget: 9 Moves That Cost Almost Nothing](https://affordabledenverseo.com/blog/local-seo-on-a-budget/): Local SEO on a budget: nine practical moves for small businesses that cost more time than money, in the order that moves the Map Pack fastest.
+- [SEO Red Flags: 10 Signs an SEO Offer Will Waste Your Money](https://affordabledenverseo.com/blog/seo-red-flags/): The SEO red flags to watch for in any proposal or sales call, from ranking guarantees to link networks, and the better questions to ask instead.
+- [One-Time SEO Package vs Monthly SEO: Which Should You Buy?](https://affordabledenverseo.com/blog/one-time-seo-package-vs-monthly/): One-time SEO packages vs monthly SEO plans: what each includes, when a one-time fix is enough, and when you need ongoing work.
+- [AI Search on a Budget: Get Recommended by ChatGPT Without a Big Spend](https://affordabledenverseo.com/blog/ai-search-on-a-budget/): How small businesses can show up in ChatGPT, Gemini and Google AI Overviews on a budget: clear answers, structured data, consistent listings and reviews.
+- [How to Set an SEO Budget (Without Guessing)](https://affordabledenverseo.com/blog/how-to-set-an-seo-budget/): How to set an SEO marketing budget: work backward from customer value, decide what you can do yourself, and split the budget across the work that matters.
+
+## Optional
+- [About](https://affordabledenverseo.com/about/): Who is behind the site.
+- [Contact](https://affordabledenverseo.com/contact/): Free strategy call.
+- [Full text](https://affordabledenverseo.com/llms-full.txt): Direct answers and FAQs for every page.
