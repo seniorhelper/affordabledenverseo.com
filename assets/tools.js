@@ -112,5 +112,59 @@ function initStack(){var box=$('#ts');if(!box)return;
   $('#ts-out',box).innerHTML=h}
  $$('input',box).forEach(function(e){e.addEventListener('input',calc);e.addEventListener('change',calc)});calc()}
 
-[initQuote,initBudget,initBuilder,initPlan,initStack].forEach(function(f){try{f()}catch(e){if(window.console)console.error(e)}});
+
+/* ---------- 6. Small business break-even ---------- */
+function num(el,lo,hi){var v=parseFloat(el.value);if(!isFinite(v))return null;return Math.min(hi,Math.max(lo,v))}
+function stat(label,val,color){return '<div class="card" style="box-shadow:none;padding:16px"><div class="muted" style="font-size:13px">'+label+'</div><div class="num" style="font-size:34px'+(color?';color:'+color:'')+'">'+val+'</div></div>'}
+function fmt(x){return x<0.1?'under 0.1':x<10?x.toFixed(1):Math.ceil(x).toLocaleString()}
+function initBreakeven(){var box=$('#breakeven');if(!box)return;
+ function calc(){var v=num($('#be-v',box),0,1e9),m=num($('#be-m',box),0,1e9),c=num($('#be-c',box),0,1e9),b=num($('#be-b',box),0,1e9),r=num($('#be-r',box),0,1e9),o=$('#breakeven-out',box);
+  if(v===null||m===null||c===null||b===null||r===null){o.innerHTML=res('warn','Fill in every box with a number to see your break-even.');return}
+  if(m>100||c>100){o.innerHTML=res('warn','Percentages top out at 100. Check the margin and close rate boxes.');return}
+  if(r>365){o.innerHTML=res('warn','That is more than one repeat purchase a day. Enter repeat purchases per year.');return}
+  if(v<=0||m<=0){o.innerHTML=res('warn','A sale with no value or no profit can never pay back marketing. Check the sale value and margin.');return}
+  if(c<=0){o.innerHTML=res('warn','If no leads become customers, no budget can break even. Enter your best guess at a close rate.');return}
+  if(b<=0){o.innerHTML=res('ok','With no monthly spend there is nothing to earn back. Enter the budget you are considering.');return}
+  var perCustMonthly=v*(m/100)*(1+r);var cust=b/perCustMonthly,leads=cust/(c/100);
+  var h='<div class="grid g4">'+stat('New customers a month to break even',fmt(cust))+stat('Leads a month to break even',fmt(leads),'var(--copper)')+stat('Profit per new customer (first year)',money(perCustMonthly))+'</div>';
+  if(leads<=3)h+=res('ok','A small number of leads covers this budget. If your market has search demand, this budget has room to pay for itself.');
+  else if(leads<=15)h+=res('info','Reachable for many local businesses, but it should be measured. Make sure calls and forms are tracked from day one.');
+  else h+=res('warn','That is a lot of leads for this budget. Consider a smaller scope, a one-time fix, or raising the value of each sale before spending more.');
+  h+=res('info','Break-even here means profit from new customers equals the monthly spend. SEO usually takes months to build, so judge it over a season, not a single month.');
+  h+=gap('Want help reading your numbers?');o.innerHTML=h}
+ $$('input',box).forEach(function(e){e.addEventListener('input',calc)});calc()}
+
+/* ---------- 7. DIY or hire ---------- */
+function initDiyHire(){var box=$('#diyhire');if(!box)return;
+ function calc(){var hw=num($('#dh-h',box),0,20),rate=num($('#dh-r',box),0,1e9),p=num($('#dh-p',box),0,1e9),t=num($('#dh-t',box),0,1e9),o=$('#diyhire-out',box);
+  $('#dh-hv',box).textContent=(hw===null?0:hw)+' hr'+(hw===1?'':'s');
+  if(rate===null||p===null||t===null||hw===null){o.innerHTML=res('warn','Fill in every box with a number to compare.');return}
+  var time=hw*52/12*rate,diy=time+t,mx=Math.max(diy,p,1);
+  var h='<div class="grid g4">'+stat('Your DIY cost a month',money(diy),'var(--copper)')+stat('The plan a month',money(p))+stat('Hours you get back a year',Math.round(hw*52))+'</div>';
+  h+='<div class="bars" style="margin-top:10px">'+bar('Do it yourself',diy,mx,'#a4461a',money(diy))+bar('Hire the plan',p,mx,'#0b6b43',money(p))+'</div>';
+  if(hw===0)h+=res('info','At zero hours, DIY costs only your tools, but nothing gets done either. Be realistic about the hours the work needs.');
+  else if(diy>p)h+=res('info','Hiring costs less than your time at these settings, and you get back '+Math.round(hw*52)+' hours a year to spend on customers.');
+  else if(diy>p*0.7)h+=res('warn','It is close. The deciding factor is whether you enjoy the work and do it consistently.');
+  else h+=res('ok','DIY is cheaper at these settings. Spend money only on one-time fixes you cannot do yourself.');
+  h+=gap('Want a straight answer on DIY versus hiring for your business?');o.innerHTML=h}
+ $$('input',box).forEach(function(e){e.addEventListener('input',calc)});calc()}
+
+/* ---------- 8. Marketing budget splitter ---------- */
+function initMixer(){var box=$('#mixer');if(!box)return;
+ var MIX={found:{web:45,seo:35,rev:15,ads:5},chosen:{web:20,seo:50,rev:15,ads:15},grow:{web:10,seo:55,rev:10,ads:25}};
+ function calc(){var b=num($('#mx-b',box),0,1e9),st=$('#mx-s',box).value,o=$('#mixer-out',box);
+  if(b===null){o.innerHTML=res('warn','Enter a monthly budget as a number.');return}
+  var m={};for(var k in MIX[st])m[k]=MIX[st][k];
+  if($('#mx-w',box).checked){m.seo+=m.web-5;m.web=5}
+  if($('#mx-r',box).checked){m.seo+=m.rev-5;m.rev=5}
+  var L={web:['Website','#1d5fa8'],seo:['SEO and local','#0b6b43'],rev:['Reviews and reputation','#f2b705'],ads:['Paid ads tests','#a4461a']};
+  var h='<div class="bars">';['web','seo','rev','ads'].forEach(function(k){h+=bar(L[k][0]+' ('+m[k]+'%)',m[k],100,L[k][1],money(b*m[k]/100))});h+='</div>';
+  if(b<300)h+=res('warn','Under about $300 a month, focus on one thing: usually your Google Business Profile and website basics. Splitting a tiny budget four ways rarely moves any of them.');
+  else if(b<597)h+=res('info','At this budget, a narrow monthly scope or a one-time fix usually beats a full package. Our monthly SEO plans start at $597.');
+  else h+=res('ok','This budget can fund a real monthly program. Our SEO plans start at $597 a month and custom websites at $99 a month on a subscribe-to-own plan.');
+  h+=res('info','These are starting splits based on stage, not a rule. Seasonal businesses often shift money toward ads in busy months.');
+  h+=gap('Want a mix tailored to your market?');o.innerHTML=h}
+ $$('input,select',box).forEach(function(e){e.addEventListener('input',calc);e.addEventListener('change',calc)});calc()}
+
+[initQuote,initBudget,initBuilder,initPlan,initStack,initBreakeven,initDiyHire,initMixer].forEach(function(f){try{f()}catch(e){if(window.console)console.error(e)}});
 })();
